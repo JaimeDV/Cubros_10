@@ -7,32 +7,31 @@ using UnityEngine;
 public class S_DragableSprite : MonoBehaviour
 {
     private bool draged;
-    private Transform focus;
     private Camera cam;
-    private Vector2 position;
-    private Vector2 offset;
-    private RaycastHit hit;
-    private Ray ray;
-    private Rigidbody2D riggid;
-
+    public static event System.Action<GameObject> eggCrack;
     void Start()
     {
         draged = false;
         cam = Camera.main;
     }
+    public void OnMouseDown()
+    {
+        draged = true;
+    }
+    public void OnMouseUp()
+    {
+        draged= false;
+    }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (draged)
         {
-            ray=cam.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray.origin,ray.direction,out hit))
-            {
-                focus = hit.collider.transform;
-                position = cam.WorldToScreenPoint(focus.position);
-                hit.get
-            }
+            eggCrack(this.gameObject);
+           
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            transform.Translate(mousePosition);
         }
     }
+       
 }
