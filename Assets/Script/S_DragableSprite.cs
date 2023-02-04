@@ -16,11 +16,13 @@ public class S_DragableSprite : MonoBehaviour
     }
     public void OnMouseDown()
     {
+        S_MusicSingleton.instance.Eggcrack();
         draged = true;
+      
     }
     public void OnMouseUp()
     {
-        draged= false;
+        draged = false;
     }
 
     void Update()
@@ -28,7 +30,6 @@ public class S_DragableSprite : MonoBehaviour
         if (draged)
         {
             eggCrack(this.gameObject);
-           
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(mousePosition);
         }

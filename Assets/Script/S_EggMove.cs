@@ -13,6 +13,7 @@ public class S_EggMove : MonoBehaviour
     }
     private void MoveEgg(GameObject egg)
     {
+   
         if (this.gameObject.Equals(egg))
         {
             rigid.gravityScale = 0.5f;
