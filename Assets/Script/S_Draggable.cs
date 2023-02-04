@@ -9,6 +9,10 @@ public class S_Draggable : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,
     private Canvas canvas;
     private CanvasGroup canvasGroup;
     private RectTransform position;
+    [SerializeField]
+    private float dragFactor=1;
+    [SerializeField]
+    private float limitVelocity = 1.5f;
 
     private void Awake()
     {
@@ -24,7 +28,25 @@ public class S_Draggable : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,
 
     public void OnDrag(PointerEventData eventData)//mientras haces drag
     {
-        position.anchoredPosition += eventData.delta/canvas.scaleFactor;
+        Vector2 velocity = (eventData.delta / canvas.scaleFactor) * dragFactor;
+        if (velocity.x> limitVelocity)
+        {
+            velocity.x = limitVelocity;
+        }
+        if (velocity.y > limitVelocity)
+        {
+            velocity.y = limitVelocity;
+        }
+        if (velocity.x < -limitVelocity)
+        {
+            velocity.x = -limitVelocity;
+        }
+        if (velocity.y < -limitVelocity)
+        {
+            velocity.y = -limitVelocity;
+        }
+        position.anchoredPosition += velocity;
+        Debug.Log(velocity);
 
     }
 
