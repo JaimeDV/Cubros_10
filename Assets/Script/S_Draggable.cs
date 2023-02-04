@@ -22,8 +22,8 @@ public class S_Draggable : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Start Dragging");
-        canvasGroup.blocksRaycasts = false;
-        canvasGroup.alpha = 0.6f;
+        //canvasGroup.blocksRaycasts = false;
+        //canvasGroup.alpha = 0.6f;
     }
 
     public void OnDrag(PointerEventData eventData)//mientras haces drag

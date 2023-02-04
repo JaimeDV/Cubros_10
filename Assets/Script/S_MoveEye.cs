@@ -28,7 +28,6 @@ public class S_MoveEye : MonoBehaviour
         //Convert mouse pointer cords into a worldspace vector3
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition + new Vector3(Mathf.Sin(Time.time * speed) * amount, Mathf.Sin(Time.time * speed) * amount, 0));
 
-        Debug.Log(pos);
         pos.z = 0.0f;
 
         //Create a dir target based on mouse vector * factor

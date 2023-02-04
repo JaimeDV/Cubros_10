@@ -52,6 +52,9 @@ MonoBehaviour:
   SecondarySoundEffects: {fileID: 7820986461346871844}
   eggSmash1: {fileID: 8300000, guid: 79e9d246fcfd7d344a22bf08584a6e18, type: 3}
   eggSmash2: {fileID: 8300000, guid: 33959a327166ddc4e87caaa45a1945e7, type: 3}
+  blood1: {fileID: 8300000, guid: d90e347641fd3d44a988246c2bbbf573, type: 3}
+  blood2: {fileID: 8300000, guid: 3358692eb30602f4486ab8ade986c01b, type: 3}
+  blood3: {fileID: 8300000, guid: f289a98df83c95847a855378b10af3fc, type: 3}
 --- !u!1 &3037498797276082715
 GameObject:
   m_ObjectHideFlags: 0
