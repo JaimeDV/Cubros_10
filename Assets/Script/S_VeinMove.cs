@@ -14,7 +14,7 @@ public class S_VeinMove : MonoBehaviour
     {
         if (this.gameObject.Equals(vein))
         {
-            rigid.gravityScale = 9f;
+            rigid.gravityScale = 3f;
         }
 
     }

@@ -19,6 +19,8 @@ public class S_MoveEye : MonoBehaviour
     private Vector3 center;
     void Start()
     {
+        S_MusicSingleton.instance.EyeMusic();
+        S_MusicSingleton.instance.SecondaryEye();
         rigid = GetComponent<Rigidbody2D>();
         center = transform.position;
     }

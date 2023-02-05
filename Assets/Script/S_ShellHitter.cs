@@ -10,6 +10,12 @@ public class S_ShellHitter : MonoBehaviour
     private int shells = 0;
     [SerializeField]
     private float fetusTime=1f;
+    [SerializeField]
+    private So_Doll doll;
+    private void Start()
+    {
+        S_MusicSingleton.instance.EggMusic();
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag.Equals(eggTag))
@@ -29,6 +35,8 @@ public class S_ShellHitter : MonoBehaviour
     {
         //aqui algo de auido
         yield return new WaitForSeconds(fetusTime);
-        SceneManager.LoadScene("Sc_MainMenu");
+        doll.Fetus = true;
+        S_MusicSingleton.instance.MainMusic();
+        SceneManager.LoadScene("Sc_Doll");
     }
 }

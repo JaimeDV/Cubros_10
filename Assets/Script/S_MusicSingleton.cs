@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -22,6 +23,14 @@ public class S_MusicSingleton : MonoBehaviour
     private AudioClip blood2;
     [SerializeField]
     private AudioClip blood3;
+    [SerializeField]
+    private AudioClip musicaMenu;
+    [SerializeField]
+    private AudioClip musicaHuevo;
+    [SerializeField]
+    private AudioClip musicaOjo;
+    [SerializeField]
+    private AudioClip auxiliarOjo;
     private float rangeMaxPitch = 1.1f;
     private float rangeMinPitch = 0.8f;
     private void Awake()
@@ -75,5 +84,43 @@ public class S_MusicSingleton : MonoBehaviour
         }
         soundEffects.pitch = Random.Range(rangeMinPitch, rangeMaxPitch);
         soundEffects.Play();
+    }
+    public void SoundChange(float value)
+    {
+        soundEffects.volume = value;
+
+    }
+    public void MusicChange(float value)
+    {
+        music.volume = value;
+        soundEffects.volume = value;
+    }
+    public void MainMusic()
+    {
+        music.clip = musicaMenu;
+        music.Play();
+
+    }
+    public void EyeMusic()
+    {
+        music.clip = musicaOjo;
+        music.Play();
+
+    }
+    public void EggMusic()
+    {
+        music.clip = musicaHuevo;
+        music.Play();
+
+    }
+    public void SecondaryEye()
+    {
+        SecondarySoundEffects.clip = auxiliarOjo;
+        SecondarySoundEffects.loop=true;
+        SecondarySoundEffects.Play();
+    }
+    public void StopEye()
+    {
+        SecondarySoundEffects.Stop();
     }
 }

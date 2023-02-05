@@ -824,11 +824,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 2594cc3ef726b0c4696fee72e51b506a, type: 3}
     - target: {fileID: 8060718744424528609, guid: 54da3ba307b30e94d971d9c3abe136f5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 19.08
+      value: 19.09
       objectReference: {fileID: 0}
     - target: {fileID: 8060718744424528609, guid: 54da3ba307b30e94d971d9c3abe136f5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.67
+      value: 1.63
       objectReference: {fileID: 0}
     - target: {fileID: 8060718744424528610, guid: 54da3ba307b30e94d971d9c3abe136f5, type: 3}
       propertyPath: m_RootOrder
@@ -1154,7 +1154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429079878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -263, z: 0}
+  m_LocalPosition: {x: 0, y: -338, z: 0}
   m_LocalScale: {x: 3.0933154, y: 3.0933154, z: 3.0933154}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1199,8 +1199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29d87ffa1ea5d3469118554d5555412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTendrils: 27
+  maxTendrils: 22
   fetusTime: 6
+  doll: {fileID: 11400000, guid: 15301ff7e5395e848a78b70938b29640, type: 2}
 --- !u!50 &429079882
 Rigidbody2D:
   serializedVersion: 4
@@ -1416,8 +1417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29d87ffa1ea5d3469118554d5555412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTendrils: 27
+  maxTendrils: 22
   fetusTime: 6
+  doll: {fileID: 11400000, guid: 15301ff7e5395e848a78b70938b29640, type: 2}
 --- !u!50 &605247552
 Rigidbody2D:
   serializedVersion: 4
@@ -3010,7 +3012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602681104}
   m_LocalRotation: {x: -0, y: -0, z: 0.71112245, w: 0.70306826}
-  m_LocalPosition: {x: -85, y: -15, z: 0}
+  m_LocalPosition: {x: -142, y: -16, z: 0}
   m_LocalScale: {x: 4.196094, y: 4.196094, z: 4.196094}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3055,8 +3057,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29d87ffa1ea5d3469118554d5555412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTendrils: 27
+  maxTendrils: 22
   fetusTime: 6
+  doll: {fileID: 11400000, guid: 15301ff7e5395e848a78b70938b29640, type: 2}
 --- !u!50 &1602681108
 Rigidbody2D:
   serializedVersion: 4
@@ -3279,7 +3282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778622972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 224, z: 0}
+  m_LocalPosition: {x: 0, y: 304, z: 0}
   m_LocalScale: {x: 3.1832, y: 3.1832, z: 3.1832}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3324,8 +3327,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29d87ffa1ea5d3469118554d5555412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTendrils: 27
+  maxTendrils: 22
   fetusTime: 6
+  doll: {fileID: 11400000, guid: 15301ff7e5395e848a78b70938b29640, type: 2}
 --- !u!50 &1778622976
 Rigidbody2D:
   serializedVersion: 4
